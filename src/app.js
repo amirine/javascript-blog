@@ -1,4 +1,5 @@
 import {isGossipLengthValid} from './utils'
+import {Gossip} from './gossip.js'
 import './style.css'
 
 const form = document.getElementById('gossip-form');
@@ -19,9 +20,10 @@ function submitFormHandler(event) {
             dateOfPublication: new Date().toJSON()
         };
         button.disabled = true;
-        // Send to a server
-        input.value = '';
-        input.className = '';
-        button.disabled = false;
+        Gossip.create(gossip).then( () => {
+            input.value = '';
+            input.className = '';
+            button.disabled = false;
+        })
     }
 }
