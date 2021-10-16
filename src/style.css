@@ -47,3 +47,34 @@ button {
         margin-left: 180px;
     }
 }
+
+.floating-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.modalWindow {
+    max-width: 600px;
+    max-height: 600px;
+    margin: 150px auto;
+    overflow-y: auto;
+    background: aliceblue;
+}
+
+.modalWindow > h1 {
+    text-align: center;
+}
+
+.modalWindow .modal-window-content {
+    padding: 10rem;
+}
+
+.tokenError {
+    color: red;
+}
+
+.auth-form-modal {
+    margin: 2px auto;
+    padding: 3rem;
+}
